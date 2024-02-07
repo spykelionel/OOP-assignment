@@ -14,6 +14,10 @@ int &retfef(int a){
 
     return p;
 }
+
+inline void show(){
+    cout <<"This is an inline function."<<endl;
+}
 int main()
 {
     cout << "Hello world!" << endl;
@@ -30,8 +34,9 @@ int main()
 
 
 
-    retfef(10) = 50;
-    cout <<"After calling by retref: p="<<p<<endl;
+    //retfef(10) = 50;
+    //cout <<"After calling by retref: p="<<p<<endl;
+    show();
     return 0;
 }
 
