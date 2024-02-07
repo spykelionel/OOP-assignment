@@ -18,25 +18,28 @@ int &retfef(int a){
 inline void show(){
     cout <<"This is an inline function."<<endl;
 }
+
+// Classes
+
+class Demo {
+    private:
+    int cx,cy;
+
+    public:
+    void input_data(int x, int y){
+        cx= x;
+        cy=y;
+    }
+    void show_data(){
+        cout<<"cx="<<cx<<"\t"<<"cy="<<cy<<endl;
+    }
+};
+
 int main()
 {
-    cout << "Hello world!" << endl;
-    //my_goto();
-
-    int x = 5; // for ref
-    int y = 5; // for addr
-   // cout <<"Before Calling by reference, x="<<x<<endl;
-    //cout <<"Before Calling by address, y="<<y<<endl;
-    //call_by_ref(x);
-    //call_by_addr(&y);
-    //cout <<"After Calling by reference, x="<<x<<endl;
-    //cout <<"After Calling by address, y="<<y<<endl;
-
-
-
-    //retfef(10) = 50;
-    //cout <<"After calling by retref: p="<<p<<endl;
-    show();
+    Demo d1;
+    d1.input_data(20, 23);
+    d1.show_data();
     return 0;
 }
 
