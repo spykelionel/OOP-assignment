@@ -2,6 +2,7 @@
 #define MAX_GUESS 5
 
 using namespace std;
+void my_goto();
 
 int main()
 {
@@ -12,12 +13,12 @@ int main()
 
 // goto statements
 
-void my_goto(void){
+void my_goto(){
     int num;
     guess:
         cout <<"Guess a number. "<<endl;
-        cin<<num;
-        if(num<MAX_GUESS)goto guess;
-        count<< "You guessed" <<num << "Correctly"<<endl;
+        cin>>num;
+        if(num!=MAX_GUESS)goto guess;
+        cout<< "You guessed " <<num << " Correctly"<<endl;
 
 }
