@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #define MAX_GUESS 5
 
 using namespace std;
@@ -24,6 +25,7 @@ inline void show(){
 class Demo {
     private:
     int cx,cy;
+    char sname[10];
 
     public:
     void input_data(int x, int y){
@@ -33,13 +35,21 @@ class Demo {
     void show_data(){
         cout<<"cx="<<cx<<"\t"<<"cy="<<cy<<endl;
     }
+    void setName(char[]);
+    void printName();
 };
+
+void Demo::setName(char name[])sname;
+
+void Demo::printName(){
+    cout <<"My name is: "<<sname<<endl;
+}
 
 int main()
 {
     Demo d1;
-    d1.input_data(20, 23);
-    d1.show_data();
+    d1.setName("Lionel");
+    d1.printName();
     return 0;
 }
 
