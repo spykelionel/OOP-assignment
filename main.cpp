@@ -60,15 +60,18 @@ FUNC max_num(FUNC a, FUNC b){
     return (a>b?a:b);
 }
 
+class E {
+};
+
 int main()
 {
 
 
     try {
-        throw "An exception";
+        throw E();
     }
-    catch (char* E) {
-        cout << "CAUGHT EXCEPTION" << E <<endl;
+    catch (E e) {
+        cout << "CAUGHT EXCEPTION"<<endl;
     }
 
     cout <<"After exception something" <<endl;
