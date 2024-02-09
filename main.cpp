@@ -63,7 +63,15 @@ FUNC max_num(FUNC a, FUNC b){
 int main()
 {
 
-    cout << "Max is: " <<max_num(32, 34) <<endl;
+
+    try {
+        throw "An exception";
+    }
+    catch (char* E) {
+        cout << "CAUGHT EXCEPTION" << E <<endl;
+    }
+
+    cout <<"After exception something" <<endl;
 
     return 0;
 }
