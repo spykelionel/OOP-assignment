@@ -54,11 +54,16 @@ class B: public virtual A {};
 class C: public virtual A {};
 class D: public B, public C {};
 
+template <class FUNC>
+
+FUNC max_num(FUNC a, FUNC b){
+    return (a>b?a:b);
+}
 
 int main()
 {
-    D a;
-    cout <<"A= "<<a.a<<endl;
+
+    cout << "Max is: " <<max_num(32, 34) <<endl;
 
     return 0;
 }
