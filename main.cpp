@@ -39,17 +39,27 @@ class Demo {
     void printName();
 };
 
-void Demo::setName(char name[])sname;
-
 void Demo::printName(){
     cout <<"My name is: "<<sname<<endl;
 }
 
+class A {
+    public:
+    int a;
+        A(){
+            a = 10;
+        }
+};
+class B: public virtual A {};
+class C: public virtual A {};
+class D: public B, public C {};
+
+
 int main()
 {
-    Demo d1;
-    d1.setName("Lionel");
-    d1.printName();
+    D a;
+    cout <<"A= "<<a.a<<endl;
+
     return 0;
 }
 
